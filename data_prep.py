@@ -25,11 +25,22 @@ def load_clean_data():
     """
     Return the cleaned DataFrame used by eda.py and the model files.
 
-    TODO (owner): convert TotalCharges to numbers, handle blanks and
-    duplicates, and drop customerID.
+    Cleaning steps so far:
+    1. TotalCharges: convert from text to numbers. The 11 blank values all
+       belong to customers with tenure 0 (not yet billed), so they become 0.
+
+    TODO (owner): handle duplicates and drop customerID.
     """
     df = load_raw_data()
-    # TODO: cleaning steps go here
+
+    # --- TotalCharges: text with 11 blanks -> numbers ---
+    # Remove stray spaces, so " " becomes "" and is easy to find
+    df["TotalCharges"] = df["TotalCharges"].str.strip()
+    # Blank means a new customer (tenure 0) who has paid nothing yet
+    df["TotalCharges"] = df["TotalCharges"].replace("", "0")
+    # Now every value is a number written as text, so convert to float
+    df["TotalCharges"] = df["TotalCharges"].astype(float)
+
     return df
 
 
