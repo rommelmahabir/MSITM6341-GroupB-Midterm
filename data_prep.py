@@ -25,11 +25,13 @@ def load_clean_data():
     """
     Return the cleaned DataFrame used by eda.py and the model files.
 
-    Cleaning steps so far:
+    Cleaning steps:
     1. TotalCharges: convert from text to numbers. The 11 blank values all
        belong to customers with tenure 0 (not yet billed), so they become 0.
-
-    TODO (owner): handle duplicates and drop customerID.
+    2. Duplicates: checked while customerID was present. 7,043 rows and
+       7,043 unique IDs, 0 exact duplicates, so nothing is removed.
+    3. customerID: dropped, because it labels a customer but does not
+       describe them, so it cannot help predict churn.
     """
     df = load_raw_data()
 
@@ -40,6 +42,11 @@ def load_clean_data():
     df["TotalCharges"] = df["TotalCharges"].replace("", "0")
     # Now every value is a number written as text, so convert to float
     df["TotalCharges"] = df["TotalCharges"].astype(float)
+
+    # --- customerID: an identifier, not a feature ---
+    # Do NOT drop duplicates after this line: 22 different customers share
+    # identical details once the ID is gone, and they are real people.
+    df = df.drop("customerID", axis=1)
 
     return df
 
