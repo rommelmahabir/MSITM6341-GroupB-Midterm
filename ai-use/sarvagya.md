@@ -27,3 +27,11 @@ I ran `python3 eda.py` in the VS Code terminal, reviewed the dataset statistics,
 
 **My contribution:**
 I implemented and tested the EDA code, reviewed the generated charts, and identified key insights to share with the project team.
+
+## Session – November 1, 2026
+
+- **Tool:** ChatGPT
+- **Purpose:** Assistance with drafting Section 3 – EDA & Key Insights.
+- **What I asked:** Help interpreting descriptive statistics and chart findings, organizing the EDA report, and troubleshooting Python environment issues.
+- **What I used:** Guidance on report structure, explanations of dataset statistics, and assistance with Markdown formatting.
+- **What I changed or checked:** Reviewed the report against the actual EDA output, verified the five chart filenames, installed the missing scikit-learn dependency, and reran the Python script.
