@@ -40,7 +40,7 @@ Random Forest combines many decision trees and can capture interactions between 
 
 Unlike with Logistic Regression, balanced weights alone barely changed the default Random Forest. Its trees grow without a depth limit until every leaf is pure, so the weights have almost nothing to act on.
 
-We then tuned the model with `GridSearchCV`, testing 12 combinations of tree count, maximum depth and minimum leaf size. Each combination was scored on F1 using 5-fold cross-validation on the **training set only**, so the test set was never used for tuning. The best settings were `max_depth=10`, `min_samples_leaf=1` and `n_estimators=200` (cross-validated F1 of 0.636). Limiting the depth let the balanced weighting work: recall rose from 0.50 to 0.73. The tuned model caught 271 of the 374 churners.
+We then tuned the model with `GridSearchCV`, testing 12 combinations of tree count, maximum depth and minimum leaf size. Each combination was scored on F1 using 5-fold cross-validation on the **training set only**, so the test set was never used for tuning. The best settings were `max_depth=10`, `min_samples_leaf=1` and `n_estimators=200` (cross-validated F1 of 0.636). Limiting the depth let the balanced weighting work: recall rose from 0.50 to 0.73. The tuned model caught 271 of the 374 churners. Random Forest results can differ slightly in the third decimal place between scikit-learn versions, because the trees are built from random samples; the figures above come from our development environment, and the conclusions are the same in either case.
 
 The features the forest relied on most were **tenure**, **TotalCharges**, **MonthlyCharges**, **two-year contracts** and **Fiber optic internet**.
 
