@@ -1,6 +1,7 @@
 # Telco Customer Churn Prediction
 
 MSITM 6341 (Python) midterm project, Group B, Dallas Baptist University.
+
 ## Project Overview
 
 This project analyzes customer churn using Python and machine learning. Our goal is to understand why customers leave a telecommunications company and compare different models to identify customers who may be at risk of leaving.
@@ -96,6 +97,8 @@ Although the tuned Random Forest had a slightly higher F1 score, balanced Logist
    python3 model_logistic.py
    python3 model_random_forest.py
    ```
+   
+   Charts open one at a time; close each window to see the next. The Random Forest tuning step can take up to a minute.
 
 ## Testing
 
@@ -106,6 +109,7 @@ All five checks passed during the team's review.
 ## Conclusion
 
 This project helped our team understand how data preparation, visualization, and machine learning can support customer retention decisions. Our results also demonstrated why recall and F1 score are important when evaluating imbalanced classification problems.
+
 ## AI Use
 
-The course allows generative AI. Each team member documents their AI use in the `ai-use/` folder
+The course allows generative AI. Each team member documents their AI use in the `ai-use/` folder.
