@@ -8,7 +8,6 @@
 - **What I used from the answer:** I used `test_data_prep.py` with five checks to verify the cleaned dataset, including its size, missing values, data types, customer ID removal, and churn values.
 - **What I changed or checked myself:** I copied the code into GitHub, checked the indentation and reviewed the purpose of the five tests. I created PR #7. Rommel ran the tests and confirmed that all five passed successfully.
 ## 2026-11-01: README Update
-## 2026-11-01: README Update
 
 - **Tool:** ChatGPT
 - **What I asked:** I asked ChatGPT to help me understand how to update the README file and organize the project documentation.
