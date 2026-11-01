@@ -6,7 +6,7 @@ The raw file `data/WA_Fn-UseC_-Telco-Customer-Churn.csv` has 7,043 rows (one per
 | --- | --- | --- | --- |
 | customerID | Unique ID for each customer | Text | Dropped: it labels a customer but doesn't describe them (Decision Log row 3) |
 | gender | Customer's gender: Male or Female | Text | One-hot encoded into 1 column (row 5) |
-| SeniorCitizen | Whether the customer is 65 or older: 1 = yes, 0 = no | Number (0/1) | Unchanged: already 0/1 |
+| SeniorCitizen | Whether the customer is a senior citizen: 1 = yes, 0 = no | Number (0/1) | Unchanged: already 0/1 |
 | Partner | Whether the customer has a partner or spouse | Yes/No | One-hot encoded into 1 column (row 5) |
 | Dependents | Whether the customer has dependents, such as children | Yes/No | One-hot encoded into 1 column (row 5) |
 | tenure | Number of months the customer has been with the company (0–72) | Number | Scaled with StandardScaler, fit on the training set only (row 7) |
