@@ -106,5 +106,6 @@ All five checks passed during the team's review.
 ## Conclusion
 
 This project helped our team understand how data preparation, visualization, and machine learning can support customer retention decisions. Our results also demonstrated why recall and F1 score are important when evaluating imbalanced classification problems.
-AI Use
-The course allows generative AI. Each team member documents their AI use in the ai-use/ folder.
+## AI Use
+
+The course allows generative AI. Each team member documents their AI use in the `ai-use/` folder
