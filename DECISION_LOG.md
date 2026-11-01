@@ -1,6 +1,6 @@
 # Decision Log
 
-One line per cleaning or preprocessing decision, with the reason. This feeds the report's Cleaning and Preprocessing section.
+One line per cleaning, preprocessing or modeling decision, with the reason. This feeds report Sections 2 and 4.
 
 | # | Column | Problem found | Decision | Why |
 | --- | --- | --- | --- | --- |
